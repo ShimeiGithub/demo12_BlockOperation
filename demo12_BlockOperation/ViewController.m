@@ -34,6 +34,10 @@
     //1.创建操作
     NSBlockOperation *operation = [[NSBlockOperation alloc] init];
     
+    
+    /**
+     *  第一个添加的操作会在主线程；剩下的操作全部在子线程
+     */
     //2.向操作中添加block任务
     [operation addExecutionBlock:^{
         for (int i = 0; i < 5; i++) {
