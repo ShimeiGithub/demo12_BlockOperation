@@ -9,6 +9,15 @@
  NSOperationQueue只有两种队列
  1.主队列 同步串行
  2.自定义队列 异步并行
+ 
+ 执行方式：
+ 1. 同步 (主线程) 
+    [operation start];
+ 2. 异步执行
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    将上面的操作放到队列中 (添加的那一瞬间异步执行)
+    [queue addOperation:operation];
+ 
  */
 
 #import "ViewController.h"
